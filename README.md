@@ -1,21 +1,18 @@
-# teste-logica-coblue
+# Escopo e objetivo
 
-> A Vue.js project
+Projeto composto por dois desafios.
 
-## Build Setup
+Desafio 1: Codifique um algoritmo que liste todos os números de 1 a 100 mas nos múltiplos de 3 substitua o número por Co, nos múltiplos de 5 substitua por Blue e nos múltiplos de 3 e 5 substitua por CoBlue.
 
-``` bash
-# install dependencies
-npm install
+Desafio 2: Codifique um algoritmo que exiba uma palavra informada alternando entre letras maiúsculas e minúsculas dependendo do case da primeira letra. Se a primeira letra for maiúscula, a segunda deve ser minúscula, a terceira maiúscula, e assim sucessivamente. A mesma coisa ao contrário se a primeira letra for minúscula.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Iniciando...
 
-# build for production with minification
-npm run build
+- `https://github.com/thiagostudier/projeto-teste-pratico`
+- `cd projeto-teste-pratico`
+- `npm run dev`
+- rodar `localhost:8080`
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+### Projeto no ar
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Link: https://teste-logica-coblue.vercel.app/#/

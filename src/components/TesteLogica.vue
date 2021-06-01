@@ -9,7 +9,7 @@
     <br />
     <div class="input-case-letters">
       <h1>Desafio 2</h1>
-      <input type="text" v-model="letters_change.input" placeholder="Alterar letras entre maiúsculas e minúsculas"/>
+      <input type="text" v-model="letters_change.input" placeholder="Alterar letras entre maiúsculas e minúsculas" />
       <div class="input-case-letters-result">
         {{letters_change.output}}
       </div>
@@ -59,28 +59,20 @@ export default {
     secondTest(){
       // TRANSFORMAR A ENTRADA DOS DADOS EM ARRAY
       let array = this.letters_change.input.split('');
-      // NOVA PALAVRA
-      let new_word = '';
+      // PRIMEIRA LETRA
+      this.letters_change.output = this.letters_change.input.charAt(0);
       // PERCORRER ARRAY
-      for (var i = 0; i < array.length; i++) {
-        // VALIDAR SE NÃO FOR A PRIMEIRA LETRA
-        if(i > 0){
-          // PEGAR A ÚLTIMA LETRA INSERIDA
-          var last_letter = this.letters_change.output.charAt(i - 1);
-          if(last_letter === last_letter.toLowerCase()){
-            // ADICIONAR LETRA MAIUSCULA
-            new_word = new_word + array[i].toUpperCase();
-          }else{
-            // ADICIONAR LETRA MINUSCULA
-            new_word = new_word + array[i].toLowerCase();
-          }
+      for (var i = 1; i < array.length; i++) {
+        // PEGAR A ÚLTIMA LETRA INSERIDA
+        var last_letter = this.letters_change.output.charAt(i - 1);
+        if(last_letter === last_letter.toLowerCase()){
+          // ADICIONAR LETRA MAIUSCULA
+          this.letters_change.output = this.letters_change.output + array[i].toUpperCase();
         }else{
-          // ADICIONAR PRIMEIRA LETRA
-          new_word = array[i];
+          // ADICIONAR LETRA MINUSCULA
+          this.letters_change.output = this.letters_change.output + array[i].toLowerCase();
         }
       }
-      // ATUALIZAR SAÍDA DOS DADOS
-      this.letters_change.output = new_word;
     }
   },
   watch:{
